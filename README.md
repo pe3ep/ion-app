@@ -2,10 +2,16 @@
 
 ## Usage
 
+### Clone the project
+
+```bash
+$ git clone https://github.com/pe3ep/ion-app
+```
+
 ### Install Dependencies
 
 ```bash
-$ cd my-app
+$ cd ion-app
 
 # using yarn or npm
 $ yarn (or `npm install`)
