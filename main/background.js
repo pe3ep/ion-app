@@ -17,7 +17,7 @@ if (isProd) {
   const mainWindow = createWindow('main', {
     width: 1000,
     height: 600,
-    minWidth: 960,
+    minWidth: 1100,
     fullscreenable: false,
     minHeight: 720,
     autoHideMenuBar: true,

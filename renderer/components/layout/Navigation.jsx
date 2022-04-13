@@ -14,7 +14,7 @@ const Navigation = ({ children }) => {
         <div className="bg-neutral-900 relative p-4 rounded-md cursor-pointer group">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
+            className="transition-colors group-hover:text-blue-600 h-6 w-6"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -26,14 +26,14 @@ const Navigation = ({ children }) => {
               d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
             />
           </svg>
-          <div className="transition-transform duration-75 | absolute top-[50%] left-20 translate-y-[-50%] | bg-black/25 py-2 px-4 rounded-md scale-0 group-hover:scale-100">
+          <div className="transition-transform ease-in-out | absolute top-[50%] left-20 translate-y-[-50%] | bg-black/25 py-2 px-4 rounded-md | origin-left scale-0 group-hover:scale-100">
             Игры
           </div>
         </div>
         <div className="absolute bottom-0 mb-4 bg-neutral-900 p-4 rounded-md cursor-pointer group">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
+            className="transition-colors group-hover:text-blue-600 h-6 w-6"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -50,13 +50,13 @@ const Navigation = ({ children }) => {
               d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
             />
           </svg>
-          <div className="transition-transform duration-75 | absolute top-[50%] left-20 translate-y-[-50%] | bg-black/25 py-2 px-4 rounded-md scale-0 group-hover:scale-100">
+          <div className="transition-transform ease-in-out | absolute top-[50%] left-20 translate-y-[-50%] | bg-black/25 py-2 px-4 rounded-md | origin-left scale-0 group-hover:scale-100">
             Настройки
           </div>
         </div>
       </div>
 
-      <div className="pl-[80px]">{children}</div>
+      <section className="ml-[80px] p-8">{children}</section>
     </>
   )
 }

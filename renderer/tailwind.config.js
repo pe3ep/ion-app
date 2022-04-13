@@ -5,7 +5,12 @@ module.exports = {
     './renderer/components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        Inter: ['Inter', 'sans-serif'],
+        Manrope: ['Manrope', 'sans-serif'],
+      },
+    },
   },
   variants: {
     extend: {},
