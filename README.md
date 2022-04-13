@@ -1,23 +1,10 @@
-<p align="center"><img src="https://i.imgur.com/P08L8HO.png"></p>
+# **ION Desktop app**
 
 ## Usage
 
-### Create an App
-
-```
-# with npx
-$ npx create-nextron-app my-app --example with-javascript-tailwindcss
-
-# with yarn
-$ yarn create nextron-app my-app --example with-javascript-tailwindcss
-
-# with pnpx
-$ pnpx create-nextron-app my-app --example with-javascript-tailwindcss
-```
-
 ### Install Dependencies
 
-```
+```bash
 $ cd my-app
 
 # using yarn or npm
@@ -29,10 +16,10 @@ $ pnpm install --shamefully-hoist
 
 ### Use it
 
-```
+```bash
 # development mode
-$ yarn dev (or `npm run dev` or `pnpm run dev`)
+$ yarn dev # (or `npm run dev` or `pnpm run dev`)
 
 # production build
-$ yarn build (or `npm run build` or `pnpm run build`)
+$ yarn build # (or `npm run build` or `pnpm run build`)
 ```
