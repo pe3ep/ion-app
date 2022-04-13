@@ -8,7 +8,7 @@ function Home() {
       <Head>
         <title>ION</title>
       </Head>
-      <div></div>
+      <div className="text-white">Test</div>
     </>
   )
 }

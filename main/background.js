@@ -1,7 +1,6 @@
 import { app } from 'electron'
 import serve from 'electron-serve'
 import { createWindow } from './helpers'
-const path = require('path')
 
 const isProd = process.env.NODE_ENV === 'production'
 
@@ -12,6 +11,7 @@ if (isProd) {
 }
 
 ;(async () => {
+  setupTitlebar()
   await app.whenReady()
 
   const mainWindow = createWindow('main', {
@@ -22,16 +22,15 @@ if (isProd) {
     minHeight: 720,
     autoHideMenuBar: true,
     darkTheme: true,
-    webPreferences: {
-      preload: path.join(__dirname, 'preload.js'), // use a preload script
-    },
   })
 
+  attachTitlebarToWindow(mainWindow)
+
   if (isProd) {
-    await mainWindow.loadURL('app://./home.html')
+    await mainWindow.loadURL('app://./index.html')
   } else {
     const port = process.argv[2]
-    await mainWindow.loadURL(`http://localhost:${port}/home`)
+    await mainWindow.loadURL(`http://localhost:${port}/`)
     mainWindow.webContents.openDevTools()
   }
 })()
@@ -39,3 +38,10 @@ if (isProd) {
 app.on('window-all-closed', () => {
   app.quit()
 })
+
+import {
+  setupTitlebar,
+  attachTitlebarToWindow,
+} from 'custom-electron-titlebar/main'
+
+// setup the titlebar main process

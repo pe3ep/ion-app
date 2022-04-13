@@ -1,13 +1,14 @@
-import React from 'react';
-
-import '../styles/globals.css';
+import Navigation from '../components/layout/Navigation'
+import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <React.Fragment>
-      <Component {...pageProps} />
-    </React.Fragment>
-  );
+    <>
+      <Navigation>
+        <Component {...pageProps} />
+      </Navigation>
+    </>
+  )
 }
 
-export default MyApp;
+export default MyApp
