@@ -18,6 +18,7 @@ if (isProd) {
     width: 1000,
     height: 600,
     minWidth: 1100,
+    show: false,
     fullscreenable: false,
     minHeight: 720,
     autoHideMenuBar: true,

@@ -18,3 +18,7 @@ body {
 /* Stop purging. */
 
 /* Your own custom utilities */
+.button {
+  @apply transition-colors bg-white text-black px-6 py-2 rounded-md text-lg font-Manrope font-extrabold shadow-md
+  hover:bg-blue-600 hover:text-white;
+}

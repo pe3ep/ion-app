@@ -1,7 +1,24 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Gamecard from '../components/Gamecard'
+import craftImg from '../../resources/img/craft/banner.png'
 
 function Home() {
+  const games = [
+    {
+      name: 'Counter-strike: Global Offensive',
+      key: 'csgo',
+      description: '5v5 tactical shooter',
+      image: craftImg,
+    },
+    {
+      name: 'Minecraft',
+      key: 'craft',
+      description: 'open world survival game',
+      image: craftImg,
+    },
+  ]
+
   return (
     <>
       <Head>
@@ -10,11 +27,21 @@ function Home() {
       <h1 className="text-white text-3xl font-Manrope font-extrabold mb-8">
         Игры
       </h1>
-      <div className="grid_layout grid gap-8"></div>
+      <div className="grid_layout grid gap-8">
+        {games.map((game) => (
+          <Gamecard
+            title={game.name}
+            key={game.key}
+            action={game.key}
+            description={game.description}
+            image={game.image}
+          />
+        ))}
+      </div>
 
       <style jsx>{`
         .grid_layout {
-          grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+          grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
         }
       `}</style>
     </>
