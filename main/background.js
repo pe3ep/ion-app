@@ -1,6 +1,7 @@
 import { app } from 'electron'
 import serve from 'electron-serve'
 import { createWindow } from './helpers'
+const path = require('path')
 
 const isProd = process.env.NODE_ENV === 'production'
 
@@ -16,10 +17,14 @@ if (isProd) {
   const mainWindow = createWindow('main', {
     width: 1000,
     height: 600,
-    minWidth: 700,
+    minWidth: 960,
     fullscreenable: false,
-    minHeight: 450,
+    minHeight: 720,
     autoHideMenuBar: true,
+    darkTheme: true,
+    webPreferences: {
+      preload: path.join(__dirname, 'preload.js'), // use a preload script
+    },
   })
 
   if (isProd) {
