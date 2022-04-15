@@ -1,15 +1,16 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Gamecard from '../components/Gamecard'
-import craftImg from '../../resources/img/craft/banner.png'
+import csgoImg from '../../resources/img/csgo/icon.png'
+import craftImg from '../../resources/img/craft/icon.png'
 
 function Home() {
   const games = [
     {
-      name: 'Counter-strike: Global Offensive',
+      name: 'Counter-strike',
       key: 'csgo',
       description: '5v5 tactical shooter',
-      image: craftImg,
+      image: csgoImg,
     },
     {
       name: 'Minecraft',

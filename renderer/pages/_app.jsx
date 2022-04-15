@@ -1,8 +1,34 @@
 import Navigation from '../components/layout/Navigation'
-import '../styles/globals.css'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
+import { motion, AnimatePresence } from 'framer-motion'
+import ProgressBar from '@badrap/bar-of-progress'
+import { useEffect } from 'react'
+
+import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter()
+
+  const progress = new ProgressBar({
+    size: 4,
+    color: '#2563EB',
+    className: 'bar-of-progress',
+    delay: 100,
+  })
+
+  useEffect(() => {
+    router.events.on('routeChangeStart', progress.start)
+    router.events.on('routeChangeComplete', progress.finish)
+    router.events.on('routeChangeError', progress.finish)
+
+    return () => {
+      router.events.off('routeChangeStart', progress.start)
+      router.events.off('routeChangeComplete', progress.finish)
+      router.events.off('routeChangeError', progress.finish)
+    }
+  }, [router])
+
   return (
     <>
       <Head>
@@ -14,7 +40,33 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <Navigation>
-        <Component {...pageProps} />
+        <AnimatePresence exitBeforeEnter>
+          <motion.div
+            key={router.route}
+            initial={{
+              opacity: 0,
+              y: 30,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 0.3,
+                ease: 'easeOut',
+                delay: 0.2,
+              },
+            }}
+            exit={{
+              opacity: 0,
+              y: 30,
+              transition: {
+                duration: 0.2,
+                ease: 'easeIn',
+              },
+            }}>
+            <Component {...pageProps} />
+          </motion.div>
+        </AnimatePresence>
       </Navigation>
     </>
   )

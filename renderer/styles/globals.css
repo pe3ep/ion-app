@@ -22,3 +22,17 @@ body {
   @apply transition-colors bg-white text-black px-6 py-2 rounded-md text-lg font-Manrope font-extrabold shadow-md
   hover:bg-blue-600 hover:text-white;
 }
+
+.button-positive {
+  @apply transition-colors bg-green-600 text-white px-6 py-2 rounded-md text-lg font-Manrope font-extrabold shadow-md
+  hover:bg-blue-600;
+}
+
+.button-negative {
+  @apply transition-colors bg-red-600 text-white px-6 py-2 rounded-md text-lg font-Manrope font-extrabold shadow-md
+  hover:bg-blue-600;
+}
+
+.heading {
+  @apply font-Manrope text-white font-extrabold;
+}
