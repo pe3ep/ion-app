@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
   const progress = new ProgressBar({
     size: 4,
     color: '#2563EB',
-    className: 'bar-of-progress',
+    className: 'z-[9999]',
     delay: 100,
   })
 

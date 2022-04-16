@@ -17,7 +17,7 @@ const Gamecard = (props) => {
             </h1>
           </div>
           <div className="">
-            <p>{props.description}</p>
+            <p className="font-Inter text-gray-300">{props.description}</p>
           </div>
         </div>
       </Link>

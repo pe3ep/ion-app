@@ -23,7 +23,7 @@ function Home() {
   return (
     <>
       <Head>
-        <title>ION</title>
+        <title>Игры</title>
       </Head>
       <h1 className="text-white text-3xl font-Manrope font-extrabold mb-8">
         Игры
