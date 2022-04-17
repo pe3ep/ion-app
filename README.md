@@ -17,7 +17,7 @@ $ git clone https://github.com/pe3ep/ion-app
 $ cd ion-app
 
 # using yarn or npm
-$ yarn (or `npm install`)
+$ yarn # (or `npm install`)
 
 # using pnpm
 $ pnpm install --shamefully-hoist
