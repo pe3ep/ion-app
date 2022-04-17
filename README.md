@@ -1,4 +1,4 @@
-# **ION Desktop app**
+# ION Windows App | BETA
 
 ## Usage
 
